@@ -21,9 +21,17 @@ console.log(fibArray(2));
 console.log(fibArray(3));
 console.log(fibArray(8));
 
-// function fibArrayRec(number) {
-//   if ((number = 3)) {
-//     return [0, 1, 1];
-//   }
-//   return [0, 1, 1];
-// }
+function fibArrayRec(n) {
+  if (n === 1) {
+    return [0];
+  }
+  if (n === 2) {
+    return [0, 1];
+  }
+  return [...fibArrayRec(n - 1), fibArrayRec(n - 1)[n - 3] + fibArrayRec(n - 1)[n - 2]];
+}
+
+console.log(fibArrayRec(1));
+console.log(fibArrayRec(2));
+console.log(fibArrayRec(3));
+console.log(fibArrayRec(8));
