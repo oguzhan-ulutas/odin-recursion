@@ -31,7 +31,8 @@ function fibArrayRec(n) {
   return [...fibArrayRec(n - 1), fibArrayRec(n - 1)[n - 3] + fibArrayRec(n - 1)[n - 2]];
 }
 
-console.log(fibArrayRec(1));
-console.log(fibArrayRec(2));
-console.log(fibArrayRec(3));
-console.log(fibArrayRec(8));
+// Example usage:
+console.log(fibArrayRec(1)); // Output: [0]
+console.log(fibArrayRec(2)); // Output: [0, 1]
+console.log(fibArrayRec(3)); // Output: [0, 1, 1]
+console.log(fibArrayRec(8)); // Output: [0, 1, 1, 2, 3, 5, 8, 13]
